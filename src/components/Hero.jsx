@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from 'gsap';
 
 import { ScrollTrigger } from 'gsap/all';
+import VideoPreview from "./VideoPreview";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,6 +41,10 @@ const Hero = () => {
       setIsLoading(false)
     }
   }, [loadedVideos])
+
+  const playVideo = () => {
+
+  }
 
   useGSAP(
     () => {
@@ -171,6 +176,10 @@ const Hero = () => {
         bottom-5 right-5 text-black">
         G<b>a</b>ming
       </h1>
+
+      {/* <div id="video-frame" className="z-50">
+        <VideoPreview />
+      </div> */}
     </div>
   )
 }
